@@ -13,8 +13,6 @@ RUN dotnet publish "Tuchka.csproj" -c Release -o /app/publish \
 FROM mcr.microsoft.com/dotnet/runtime-deps:6.0-alpine AS final
 WORKDIR /app
 
-EXPOSE 80
-
 COPY --from=publish /app/publish .
 ENV TZ=Europe/Moscow
 ENTRYPOINT [ "./Tuchka" ]
