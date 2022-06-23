@@ -1,5 +1,5 @@
 const config = {
-    apiUrl: "http://localhost:5010/api"
+    apiUrl: "https://tuchka-cloud.herokuapp.com/api"
 }
 
 export default config
